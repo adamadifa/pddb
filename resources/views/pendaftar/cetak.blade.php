@@ -50,18 +50,17 @@
     hr.style2 {
         border-top: 3px double #8c8b8b;
     }
-
 </style>
 <table style="width:100%">
     <tr>
         <td style="width:10%">
-            <img src="{{ URL::to('/')}}/app-assets/images/logo/logopesantren.png" alt="" width="80px" height="80px">
+            <img src="{{ URL::to('/') }}/app-assets/images/logo/logopesantren.png" alt="" width="80px" height="80px">
         </td>
         <td style="text-align: center">
             <h1 class="judul">
                 PANITIA PENERIMAAN SANTRI BARU ( PSB )<br>
                 PESANTREN PERSATUAN ISLAM AL AMIN SINDANGKASIH<br>
-                TINGKAT {{ $pendaftar->jenjang }} TAHUN AJARAN 2022/2023
+                TINGKAT {{ $pendaftar->jenjang }} TAHUN AJARAN 2025/2026
             </h1>
             <span style="font-style:italic">
                 Jln. Raya Ancol No. 27 Ancol I Sindangkasih Telp.-Fax. (0265) 325285 Ciamis 46268
@@ -73,7 +72,7 @@
     </tr>
 </table>
 <hr class="style2">
-<table style="width: 100%" border="">
+<table style="width: 100%" border="0">
     <tr>
         <td style="text-align: right">Nomor Pendaftaran : {{ $pendaftar->no_pendaftaran }}</td>
     </tr>
@@ -102,12 +101,12 @@
     <tr>
         <td>3. Tempat/Tanggal Lahir</td>
         <td>:</td>
-        <td>{{ $pendaftar->tempat_lahir }} / {{ date("d M Y",strtotime($pendaftar->tanggal_lahir)) }}</td>
+        <td>{{ $pendaftar->tempat_lahir }} / {{ date('d M Y', strtotime($pendaftar->tanggal_lahir)) }}</td>
     </tr>
     <tr>
         <td>4. Jenis Kelamin</td>
         <td>:</td>
-        <td>{{ ($pendaftar->jenis_kelamin=="L" ? "Laki-Laki":"Perempuan") }}</td>
+        <td>{{ $pendaftar->jenis_kelamin == 'L' ? 'Laki-Laki' : 'Perempuan' }}</td>
     </tr>
     <tr>
         <td>5. Anak Ke</td>
