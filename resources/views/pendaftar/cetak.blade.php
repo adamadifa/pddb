@@ -201,7 +201,7 @@
     <tr>
         <td>7. Pendidikan Ibu</td>
         <td>:</td>
-        <td>{{ $pendaftar->nama_ibu }}</td>
+        <td>{{ $pendaftar->pendidikan_ibu }}</td>
     </tr>
     <tr>
         <td>8. Pekerjaan Ibu</td>
